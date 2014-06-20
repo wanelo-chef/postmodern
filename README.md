@@ -27,6 +27,15 @@ Add a crontab for `postmodern vacuum` or `postmodern freeze` to
 regularly clean up your Postgres database.
 
 
+## Releasing new versions
+
+New versions can be publicly released using the `emeril` gem, which
+is included in the development Gemfile.
+
+```bash
+rake release
+```
+
 ## Contributing
 
 1. Fork the repository on Github
