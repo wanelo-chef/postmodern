@@ -5,3 +5,7 @@ license          'MIT'
 description      'Installs the postmodern gem into the system for PostgreSQL maintenance'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.1'
+
+supports 'omnios'
+supports 'smartos'
+supports 'ubuntu'
