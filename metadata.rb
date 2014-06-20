@@ -9,3 +9,5 @@ version          '0.1.1'
 supports 'omnios'
 supports 'smartos'
 supports 'ubuntu'
+
+depends 'build-essential'
