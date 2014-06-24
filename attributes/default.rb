@@ -2,7 +2,7 @@ default['postmodern']['version'] = '0.4.2'
 
 case node['platform']
   when 'smartos'
-    default['postmodern']['ruby_package_name'] = 'ruby193'
+    default['postmodern']['ruby_package_name'] = 'ruby193-base'
     default['postmodern']['gem_binary'] = '/opt/local/bin/gem'
   when 'omnios'
     default['postmodern']['ruby_package_name'] = 'ruby-19'
