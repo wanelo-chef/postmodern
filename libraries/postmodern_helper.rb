@@ -1,3 +1,6 @@
+require 'chef/mixin/shell_out'
+include Chef::Mixin::ShellOut
+
 module Postmodern
   class Helper < Struct.new(:node)
     def pg_options
