@@ -3,7 +3,10 @@ include_recipe 'build-essential'
 ruby_package_search = node['postmodern']['ruby_package_search']
 
 if ruby_package_search
-  ruby_package = shell_out("pkgin se ruby | grep #{ruby_package_search} | grep -- '-base-'").stdout.split(/[\s;]/).first.split('-')[0..-2].join('-')
+  ruby_package = begin
+    pkg = shell_out("pkgin se ruby | grep #{ruby_package_search} | grep -- '-base-'").stdout.split(/[\s;]/).first
+    pkg.split('-')[0..-2].join('-') if pkg
+  end
   ruby_package = node['postmodern']['ruby_package_name'] if ruby_package.nil? or ruby_package.eql?('')
 else
   ruby_package = node['postmodern']['ruby_package_name']
