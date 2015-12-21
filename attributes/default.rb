@@ -1,4 +1,4 @@
-default['postmodern']['version'] = '0.4.3'
+default['postmodern']['version'] = '0.5.0'
 
 case node['platform']
   when 'smartos'
